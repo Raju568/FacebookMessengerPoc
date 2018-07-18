@@ -1,0 +1,6 @@
+var input = '01/01/1997';
+
+var pattern =/^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$/;
+
+console.log(pattern.test(input));
+dob validation .save
