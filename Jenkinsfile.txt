@@ -1,8 +1,6 @@
 pipeline {
-  agent any
-    
-  tools {nodejs "node"}
-    
+
+     agent { docker { image 'node:6.3' } }
   stages {
         
     stage('Cloning Git') {
@@ -14,7 +12,6 @@ pipeline {
     stage('Install dependencies') {
       steps {
         sh 'npm install'
-        sh 'npm run bowerInstall'
       }
     }
      
