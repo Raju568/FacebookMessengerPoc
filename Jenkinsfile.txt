@@ -6,7 +6,6 @@ pipeline {
           
     stage('Install dependencies') {
       steps {
-      
         sh 'git pull origin master'
         sh 'npm install'
       }
