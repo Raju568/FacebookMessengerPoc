@@ -3,9 +3,8 @@ module.exports = {
 };
 
 function createUser(req, res) {
-
   let userData = req.allParams();
-
+  console.log("userData",userData);
   sails.log.info("requested param::",userData);
 
   User.createUser(userData)
